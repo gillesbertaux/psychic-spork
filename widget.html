@@ -1,0 +1,15 @@
+<html>
+  <script>
+    fetch('https://meme-api.herokuapp.com/gimme')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data.url);
+        var url = data.url
+        img.setAttribute('src', url);
+        document.getElementById('meme').setAttribute('src', url);
+      })
+  </script>
+  <body>
+    <img id="meme" src="" alt="">
+  </body>
+</html>
